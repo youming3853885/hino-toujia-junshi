@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>軍師虛擬人</title>
+<style>
+  html,body{margin:0;width:100%;height:100%;overflow:hidden;
+    background:radial-gradient(120% 80% at 50% 0%,#dfeaf7 0,#eef3f9 45%,#f5f7fa 100%)}
+  /* 把 ai-avatar-bot 注入的浮窗從「右下角小窗」改成「填滿手機畫面、置中」 */
+  #avatar-widget-root{
+    position:absolute !important;
+    left:50% !important; top:0 !important; right:auto !important; bottom:auto !important;
+    transform:translateX(-50%) scale(0.74); transform-origin:top center;
+  }
+</style>
+</head>
+<body>
+<!-- 真・互動 Live2D 虛擬人（ai-avatar-bot），預設展開 -->
+<script src="https://ai-avatar-bot-two.vercel.app/embed.js" data-open="true"></script>
+</body>
+</html>
