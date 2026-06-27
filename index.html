@@ -509,6 +509,91 @@ li.partner::marker{content:""}
           <div><span class="sec-kick">User-Layered Design · Core</span><h2 class="sec-title">四類使用者分層設計</h2></div>
         </div>
 
+        <!-- 四場景 × 三大開發方向 總覽圖表 -->
+        <div class="dirview">
+          <style>
+          .dirview{margin:6px 0 30px}
+          .dv-kick{font:700 12px/1 var(--font-mono,monospace);letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+          .dv-title{font:800 22px/1.2 var(--font-display);color:var(--navy);margin:0 0 6px}
+          .dv-lead{color:var(--muted);font-size:14px;margin:0 0 18px;max-width:680px}
+          .dv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+          @media(max-width:920px){.dv-grid{grid-template-columns:repeat(2,1fr)}}
+          @media(max-width:560px){.dv-grid{grid-template-columns:1fr}}
+          .dv-col{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:12px;padding:16px 16px 14px;box-shadow:var(--shadow)}
+          .dv-h{display:flex;align-items:flex-start;gap:8px;font:800 15px/1.2 var(--font-display);color:var(--navy)}
+          .dv-h .dv-ico{font-size:18px}
+          .dv-h small{display:block;font:600 11px/1.4 var(--font-body);color:var(--c);margin-top:2px}
+          .dv-list{list-style:none;margin:12px 0 0;padding:0;counter-reset:d}
+          .dv-list li{counter-increment:d;position:relative;padding:9px 0 9px 24px;border-top:1px solid var(--line)}
+          .dv-list li:first-child{border-top:none}
+          .dv-list li:before{content:counter(d);position:absolute;left:0;top:10px;width:17px;height:17px;border-radius:50%;background:var(--c);color:#fff;font:700 10px/17px var(--font-mono,monospace);text-align:center}
+          .dv-list b{display:block;font:700 13px/1.35 var(--font-body);color:var(--ink)}
+          .dv-list span{display:block;font-size:12px;color:var(--muted);margin:2px 0 5px}
+          .dv-list em{display:inline-block;font-style:normal;font:700 10px/1.4 var(--font-mono,monospace);letter-spacing:.03em;color:var(--c);border:1px solid var(--c);padding:1px 6px;border-radius:5px;opacity:.85}
+          .dv-flow{margin-top:18px;background:var(--navy);border-radius:12px;padding:16px 18px}
+          .dv-flow-title{font:700 13px/1 var(--font-mono,monospace);letter-spacing:.06em;color:#9ec3f5;margin-bottom:12px}
+          .dv-chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
+          .dv-node{display:inline-flex;flex-direction:column;justify-content:center;background:rgba(255,255,255,.06);border-left:3px solid var(--c);border-radius:7px;padding:7px 11px;font:700 12px/1.25 var(--font-body);color:#fff}
+          .dv-node small{font:500 10px/1.4 var(--font-mono,monospace);color:#9ec3f5;margin-top:1px}
+          .dv-arr{display:flex;align-items:center;color:#5e7da6;font-weight:800}
+          .dv-foot{margin-top:12px;font-size:12px;color:#bcd0e8}
+          </style>
+          <div class="dv-kick">Development Directions</div>
+          <div class="dv-title">四場景 × 三大開發方向</div>
+          <p class="dv-lead">每個方向都對著 iTRAQ 數據與「續約飛輪」設計；標籤＝它打哪個續約槓桿。</p>
+          <div class="dv-grid">
+            <div class="dv-col" style="--c:var(--blue)">
+              <div class="dv-h"><span class="dv-ico">🚚</span><span>駕駛 App<small>站司機這邊</small></span></div>
+              <ol class="dv-list">
+                <li><b>語音免持軍師（阿諾）</b><span>行進間純語音問答＋主動示警</span><em>習慣引擎</em></li>
+                <li><b>自動算薪＋等候費舉證</b><span>GPS 自動算趟次、舉證申請等候費</span><em>司機黏著</em></li>
+                <li><b>軍師星正向計分</b><span>E-Coaching 翻成正向、情境校正</span><em>司機黏著</em></li>
+              </ol>
+            </div>
+            <div class="dv-col" style="--c:var(--navy)">
+              <div class="dv-h"><span class="dv-ico">🏢</span><span>車行老闆 App<small>用問的戰情室</small></span></div>
+              <ol class="dv-list">
+                <li><b>用問的車隊</b><span>自然語言問 iTRAQ，不是看儀表板</span><em>核心差異化</em></li>
+                <li><b>晨間簡報主動推播</b><span>07:00 推昨日摘要＋三句建議</span><em>習慣引擎</em></li>
+                <li><b>異常翻譯官＋一鍵行動</b><span>DTC／胎壓／疲勞翻人話＋叫修</span><em>售後閉環</em></li>
+              </ol>
+            </div>
+            <div class="dv-col" style="--c:var(--signal)">
+              <div class="dv-h"><span class="dv-ico">🏛️</span><span>和泰後台<small>續約飛輪駕駛艙</small></span></div>
+              <ol class="dv-list">
+                <li><b>iTRAQ 續約健康儀表＋退訂挽留</b><span>日活／健康分、到期自證成績單</span><em>拉續約</em></li>
+                <li><b>售後導流引擎</b><span>預測維運→原廠媒合＋零件需求</span><em>售後閉環</em></li>
+                <li><b>油轉電 leads＋集團 cross-sell</b><span>EV 名單＋好集利點數／UBI 車險</span><em>油轉電</em></li>
+              </ol>
+            </div>
+            <div class="dv-col" style="--c:var(--amber)">
+              <div class="dv-h"><span class="dv-ico">🔧</span><span>保修廠 App<small>售後執行端</small></span></div>
+              <ol class="dv-list">
+                <li><b>預診斷工單</b><span>車沒到工單先到（DTC＋里程）</span><em>售後閉環</em></li>
+                <li><b>零件就緒＋bay 排程</b><span>預測缺料→備件訂位→到場即修</span><em>正常運轉</em></li>
+                <li><b>透明報價＋評分信任</b><span>逐項報價、原廠 vs 民間、和泰把關</span><em>混編生態</em></li>
+              </ol>
+            </div>
+          </div>
+          <div class="dv-flow">
+            <div class="dv-flow-title">一條龍 Demo · 一個 DTC 串起四場景</div>
+            <div class="dv-chain">
+              <span class="dv-node" style="--c:var(--signal)">v3 跳 DTC<small>P0401</small></span>
+              <span class="dv-arr">→</span>
+              <span class="dv-node" style="--c:#9ec3f5">老闆·異常翻譯<small>翻成人話示警</small></span>
+              <span class="dv-arr">→</span>
+              <span class="dv-node" style="--c:var(--signal)">和泰·售後導流<small>配原廠 bay</small></span>
+              <span class="dv-arr">→</span>
+              <span class="dv-node" style="--c:var(--amber)">保修廠·預診斷工單<small>零件就緒</small></span>
+              <span class="dv-arr">→</span>
+              <span class="dv-node" style="--c:var(--blue)">司機·自動算薪<small>等候費舉證</small></span>
+              <span class="dv-arr">→</span>
+              <span class="dv-node" style="--c:var(--ev)">月底·EV 模擬<small>油轉電一頁</small></span>
+            </div>
+            <div class="dv-foot">全程阿諾語音串場 · 一次命中：續約／售後（21%）／缺工／油轉電</div>
+          </div>
+        </div>
+
         <!-- Driver -->
         <div class="persona driver">
           <div class="p-head"><div class="ico">🚚</div><div><b>雇傭駕駛</b><small>「不是監控我，是罩我」</small></div></div>
