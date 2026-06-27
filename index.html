@@ -362,6 +362,7 @@ li.partner::marker{content:""}
       <li><a href="#s8"><span class="ix">08</span>落地路線圖</a></li>
       <li><a href="#s9"><span class="ix">09</span>風險與治理</a></li>
       <li><a href="#s10"><span class="ix">10</span>附錄</a></li>
+      <li><a href="#s11"><span class="ix">11</span>開發排程</a></li>
     </ul>
     <div class="foot">2026 和泰 AI 黑客松<br>HINO × GenAI 商用車聯網升級<br>提案白皮書 v1.0</div>
   </aside>
@@ -861,6 +862,101 @@ li.partner::marker{content:""}
         </div>
       </section>
 
+      <section id="s11">
+        <div class="sec-head">
+          <div class="sec-num">11</div>
+          <div><span class="sec-kick">Build Plan · Gantt</span><h2 class="sec-title">三人開發排程（甘特圖）</h2></div>
+        </div>
+        <div class="ganttwrap">
+          <style>
+          .ganttwrap{margin:4px 0 6px}
+          .ganttwrap .goal{display:inline-block;background:var(--amber);color:#3a2a00;font-weight:800;font-size:13px;padding:4px 12px;border-radius:20px;margin:0 0 8px}
+          .ganttwrap .gmeta{color:var(--muted);font-size:13px;margin:0 0 14px}
+          .ganttwrap .gmeta b{color:var(--ink)}
+          .ganttwrap .glegend{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:14px;font-size:12px;color:var(--muted)}
+          .ganttwrap .glegend i{display:inline-block;width:22px;height:10px;border-radius:3px;vertical-align:middle;margin-right:5px}
+          .ganttwrap .gscroll{overflow-x:auto;padding-bottom:4px}
+          .ganttwrap .gantt{min-width:1040px;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+          .ganttwrap .grow{display:grid;grid-template-columns:236px 1fr;border-top:1px solid var(--line)}
+          .ganttwrap .grow.ghead{border-top:none}
+          .ganttwrap .glbl{padding:9px 12px;font-size:12px;display:flex;align-items:center;border-right:1px solid var(--line)}
+          .ganttwrap .gtrack,.ganttwrap .gweeks{display:grid;grid-template-columns:repeat(16,1fr)}
+          .ganttwrap .gweeks{background:var(--navy)}
+          .ganttwrap .gweeks span{padding:7px 2px;text-align:center;font:600 10px/1.3 var(--font-mono);color:#cfe0f5;border-left:1px solid rgba(255,255,255,.08)}
+          .ganttwrap .gweeks span b{display:block;color:#fff;font-size:11px}
+          .ganttwrap .gweeks .pilot{background:rgba(245,165,36,.22)}
+          .ganttwrap .gweeks .ddl{background:rgba(229,64,43,.22)}
+          .ganttwrap .ghd{grid-column:1/3;padding:7px 12px;font-weight:800;font-size:12.5px;color:var(--p);display:flex;align-items:center;gap:7px;border-top:1px solid var(--line)}
+          .ganttwrap .gbar{align-self:center;height:20px;border-radius:6px;background:var(--p);color:#fff;font:700 10.5px/20px var(--font-body);padding:0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:7px 2px;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+          .ganttwrap .gbar.soft{opacity:.55}
+          .ganttwrap .gbar.star{background:linear-gradient(90deg,var(--amber),#ffce5a);color:#3a2a00;box-shadow:0 0 0 2px #fff,0 2px 8px rgba(245,165,36,.5)}
+          .ganttwrap .gms{grid-column:1/3;display:grid;grid-template-columns:236px 1fr;border-top:2px solid var(--navy)}
+          .ganttwrap .gms .glbl{font-weight:800;color:var(--navy)}
+          .ganttwrap .gms .mlab{align-self:center;font:700 10px/1.2 var(--font-body);color:var(--navy);white-space:nowrap}
+          .ganttwrap .gms .dot{align-self:center;justify-self:center;font-size:12px}
+          .ganttwrap .gfoot{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.7}
+          .ganttwrap .gfoot b{color:var(--ink)}
+          </style>
+          <div class="goal">🎯 核心目標：初賽截止前「真實司機使用過」駕駛 App</div>
+          <div class="gmeta">初賽截止 <b>2026/10/14</b>（依徵件截止；待確認）　｜　今天 <b>2026/06/27</b>　｜　約 16 週倒推，司機試用排 W13–14、留 2 週修正＋定稿緩衝</div>
+          <div class="glegend">
+            <span><i style="background:var(--blue)"></i>又鳴（你）駕駛App＋數位人後端</span>
+            <span><i style="background:var(--ev)"></i>安安｜V皮(.psd/.moc3)＋和泰後台＋落地頁</span>
+            <span><i style="background:var(--signal)"></i>昱｜保修廠＋車行老闆</span>
+            <span><i style="background:linear-gradient(90deg,var(--amber),#ffce5a)"></i>⭐ 真實司機試用</span>
+          </div>
+          <div class="gscroll">
+            <div class="gantt">
+              <div class="grow ghead">
+                <div class="glbl" style="background:var(--navy);color:#fff;font-weight:800">負責人 / 任務</div>
+                <div class="gweeks">
+                  <span>W1<b>6/30</b></span><span>W2<b>7/7</b></span><span>W3<b>7/14</b></span><span>W4<b>7/21</b></span>
+                  <span>W5<b>7/28</b></span><span>W6<b>8/4</b></span><span>W7<b>8/11</b></span><span>W8<b>8/18</b></span>
+                  <span>W9<b>8/25</b></span><span>W10<b>9/1</b></span><span>W11<b>9/8</b></span><span>W12<b>9/15</b></span>
+                  <span class="pilot">W13<b>9/22</b></span><span class="pilot">W14<b>9/29</b></span>
+                  <span>W15<b>10/6</b></span><span class="ddl">W16<b>10/13</b></span>
+                </div>
+              </div>
+              <div class="ghd" style="--p:var(--blue)">🚚 又鳴（你）· 駕駛 App ＋ 數位人後端</div>
+              <div class="grow"><div class="glbl">駕駛 App 畫面（任務/薪資/等候費，接 mock）</div><div class="gtrack" style="--p:var(--blue)"><div class="gbar" style="grid-column:1/5">畫面 + mock</div></div></div>
+              <div class="grow"><div class="glbl">數位人後端：STT/TTS/Gemini 接 AI Gateway</div><div class="gtrack" style="--p:var(--blue)"><div class="gbar" style="grid-column:4/9">語音 + AI 大腦</div></div></div>
+              <div class="grow"><div class="glbl">自動算薪 / 等候費邏輯</div><div class="gtrack" style="--p:var(--blue)"><div class="gbar" style="grid-column:6/10">算薪 + 等候費</div></div></div>
+              <div class="grow"><div class="glbl">阿諾整合 + 語音流程打通</div><div class="gtrack" style="--p:var(--blue)"><div class="gbar" style="grid-column:9/13">阿諾 + 語音整合</div></div></div>
+              <div class="grow"><div class="glbl">⭐ 真實司機試用（駕駛端跑一週）</div><div class="gtrack" style="--p:var(--blue)"><div class="gbar star" style="grid-column:13/15">⭐ 真司機試用</div></div></div>
+              <div class="grow"><div class="glbl">依司機回饋修正 + demo</div><div class="gtrack" style="--p:var(--blue)"><div class="gbar" style="grid-column:15/17">修正 + demo</div></div></div>
+              <div class="ghd" style="--p:var(--ev)">🎨 安安 · V皮(.psd→.moc3) ＋ 和泰後台 ＋ 落地頁</div>
+              <div class="grow"><div class="glbl">V皮原畫 .psd → Live2D rigging .moc3（最長）</div><div class="gtrack" style="--p:var(--ev)"><div class="gbar" style="grid-column:1/7">原畫 → Live2D 綁定</div></div></div>
+              <div class="grow"><div class="glbl">落地頁(index) + 四場景路由</div><div class="gtrack" style="--p:var(--ev)"><div class="gbar" style="grid-column:2/5">落地頁 + 路由</div></div></div>
+              <div class="grow"><div class="glbl">V皮整合進前端（Live2D widget 上線）</div><div class="gtrack" style="--p:var(--ev)"><div class="gbar" style="grid-column:6/10">V皮上前端</div></div></div>
+              <div class="grow"><div class="glbl">和泰後台（續約健康儀表，接 mock）</div><div class="gtrack" style="--p:var(--ev)"><div class="gbar" style="grid-column:8/13">和泰後台</div></div></div>
+              <div class="grow"><div class="glbl">協助串接 + demo 視覺</div><div class="gtrack" style="--p:var(--ev)"><div class="gbar soft" style="grid-column:13/16">串接 + 視覺</div></div></div>
+              <div class="ghd" style="--p:var(--signal)">🔧 昱 · 保修廠 ＋ 車行老闆</div>
+              <div class="grow"><div class="glbl">車行老闆 App（用問的 + 晨報 UI，接 mock）</div><div class="gtrack" style="--p:var(--signal)"><div class="gbar" style="grid-column:1/6">老闆端畫面</div></div></div>
+              <div class="grow"><div class="glbl">保修廠 App（預診斷工單 + bay，接 mock）</div><div class="gtrack" style="--p:var(--signal)"><div class="gbar" style="grid-column:4/9">保修廠端畫面</div></div></div>
+              <div class="grow"><div class="glbl">老闆「用問的」對話 + 異常翻譯（接 AI）</div><div class="gtrack" style="--p:var(--signal)"><div class="gbar" style="grid-column:6/11">對話 + 異常翻譯</div></div></div>
+              <div class="grow"><div class="glbl">兩端串接一條龍 + 內測</div><div class="gtrack" style="--p:var(--signal)"><div class="gbar" style="grid-column:10/13">串一條龍內測</div></div></div>
+              <div class="grow"><div class="glbl">一條龍 demo 整合 + 修正</div><div class="gtrack" style="--p:var(--signal)"><div class="gbar soft" style="grid-column:13/16">demo 整合</div></div></div>
+              <div class="gms">
+                <div class="glbl">◆ 共同里程碑</div>
+                <div class="gtrack">
+                  <div class="mlab" style="grid-column:1/2">◆階段0✓</div>
+                  <div class="mlab" style="grid-column:9/11">◆ V皮上線</div>
+                  <div class="mlab" style="grid-column:12/13">◆內測通</div>
+                  <div class="dot" style="grid-column:13/15">⭐ 司機驗證</div>
+                  <div class="mlab" style="grid-column:15/16">◆定稿</div>
+                  <div class="dot" style="grid-column:16/17">🏁 初賽</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gfoot">
+            <b>倒推邏輯：</b>初賽 10/14 → 留 W15–16 修正＋定稿＋demo → <b>⭐ 真實司機試用排 W13–14（9/22–10/5）</b> → 往前 W9 V皮上線、W12 一條龍內測串通。<br>
+            <b>關鍵路徑：</b>安安的 <b>V皮 .psd→.moc3（W1–6）</b>最長，一拖則阿諾整合與司機試用順延 → 第一優先。<br>
+            <b>司機試用最小範圍：</b>只要「駕駛 App + 阿諾語音 + 自動算薪/等候費」可動即可，不必等四場景全好。
+          </div>
+        </div>
+      </section>
+
     </div><!-- /wrap -->
 
     <footer>
@@ -925,7 +1021,8 @@ li.partner::marker{content:""}
       s7:'三方價值飛輪、收費結構、市場規模、護城河',
       s8:'初賽 → 決賽試做 → 試點 → 商轉',
       s9:'駕駛信任、隱私、準確度、採用障礙、混編車隊',
-      s10:'資料字典、名詞表、案例來源、附錄'
+      s10:'資料字典、名詞表、案例來源、附錄',
+      s11:'三人分工甘特圖｜目標：初賽前真實司機試用'
     };
     function reveal(sec){ sec.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');}); }
     var secs=document.querySelectorAll('.wrap section[id]');
